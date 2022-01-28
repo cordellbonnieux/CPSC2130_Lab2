@@ -1,15 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+P+One&family=Roboto&display=swap');
 body, html {
     margin: 0;
     padding: 0;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    background-color: yellow;
 }
 
 body canvas {
     display:block;
-    margin:20vh auto 10px auto;
-    border:1px solid #000;
+    margin:5vh auto 10px auto;
+    border:5px solid blue;
     background-color:dodgerblue;
 }
 
-body div {
-    text-align:center;
+h1 {
+    margin:5vh auto 0 auto;
+    font-size:5em;
+    display:inline-block;
+    width:auto;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color:transparent;
+    -webkit-background-clip: text;
+    animation:rainbow 1.75s infinite;
 }
+
+@keyframes rainbow {
+    0%   {
+        background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+        -webkit-background-clip: text;
+        }
+    16.6% {
+        background: linear-gradient(to right, violet, red, orange , yellow, green, cyan, blue);
+        -webkit-background-clip: text;
+        }
+    33.3% {
+        background: linear-gradient(to right, blue, violet, red, orange , yellow, green, cyan);
+        -webkit-background-clip: text;
+        }
+    50% {
+        background: linear-gradient(to right, cyan, blue, violet, red, orange , yellow, green);
+        -webkit-background-clip: text;
+        }
+    66.6% {
+        background: linear-gradient(to right, green, cyan, blue, violet, red, orange , yellow);
+        -webkit-background-clip: text;
+        }
+    83.2% {
+        background: linear-gradient(to right, yellow, green, cyan, blue, violet, red, orange);
+        -webkit-background-clip: text;
+        }
+    100% {
+        background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet, red);
+        -webkit-background-clip: text;
+        }
+  }
