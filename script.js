@@ -33,6 +33,7 @@ function draw() {
 function addMonkey() {
     const img = new Image();
     img.src = 'img/monkey.jpg';
+    img.alt = 'A monkey in a tree';
     img.onload = () => {
         ctx.drawImage(
             img, 
