@@ -1,13 +1,14 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow:hidden;
 }
 
 body canvas {
-    width:768px;
-    height:576px;
     display:block;
-    margin:20vh auto;
+    margin:20vh auto 10px auto;
     border:1px solid #000;
+}
+
+body div {
+    text-align:center;
 }
