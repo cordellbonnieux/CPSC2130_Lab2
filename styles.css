@@ -25,6 +25,12 @@ h1 {
     animation:rainbow 1.75s infinite;
 }
 
+ul {
+    width:500px;
+    text-align:left;
+    margin:auto;
+}
+
 @keyframes rainbow {
     0%   {
         background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
