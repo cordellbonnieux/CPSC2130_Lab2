@@ -2,6 +2,11 @@ const canvas = document.querySelector('canvas');
 canvas.width = 768;
 canvas.height = 576;
 const ctx = canvas.getContext('2d');
+let myFont = new FontFace(
+    "Pangolin",
+    "url(https://fonts.gstatic.com/s/pangolin/v6/cY9GfjGcW0FPpi-tWMfN79z4i6BH.woff2)"
+);
+
 const text = [
     'I love bananas, bananas',
     'are good for me, they are',
@@ -26,7 +31,6 @@ function draw() {
     drawBananas();
     addMonkey();
     drawBubble();
-    addText(text, 418, 320, 15);
 }
 
 /* Draw a monkey image to canvas and crop */
@@ -116,8 +120,16 @@ function drawBubble() {
 /* Adds text[] to canvas at (x, y), each ele of text array is a new line */
 function addText(text, x, y, fontSize) {
     ctx.fillStyle = '#000';
-    ctx.font = `${fontSize}px Mochiy Pop P One`;
+    //ctx.font = `normal ${fontSize}px ${font.family}`;
     for (let i = 0; i < text.length; i++) {
         ctx.fillText(text[i], x, y + (i * fontSize));
     }
 }
+
+myFont.load().then((font) => {
+    document.fonts.add(font);
+    const size = 16;
+    //ctx.font = "normal 15px Pangolin";
+    ctx.font = `normal ${size}px ${font.family}`;
+    addText(text, 440, 320, size);
+});
